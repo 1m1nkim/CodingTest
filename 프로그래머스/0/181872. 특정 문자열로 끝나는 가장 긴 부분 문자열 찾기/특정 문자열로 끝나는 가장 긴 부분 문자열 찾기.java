@@ -4,15 +4,12 @@ class Solution {
         int len = myString.length() - pat.length() + 1;
         int index = 0;
         int patLen = pat.length();
-        if(myString.substring(myString.length()-patLen, myString.length()-patLen+1).equals(pat)){
-            return myString;
-        }
         for(int i =0; i<len; i++){
-            String a = myString.substring(i, i+pat.length());
+            String a = myString.substring(i, i+patLen);
             if(a.equals(pat)){
                 index = i;
             }
         }
-        return answer = myString.substring(0, index+ pat.length());
+        return answer = myString.substring(0, index+ patLen);
     }
 }
